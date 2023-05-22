@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js" defer></script>
+    <script defer>
+        function generateMailto() {
+            var address = "admin@mailias.eu.org"
+            var duration = document.getElementById("duration").value
+
+            var output = "mailto:" + address + "?subject=Mailias - New alias request"
+            document.getElementById("output").innerText = output
+        }
+    </script>
     <title>Mailias</title>
 </head>
+
 <body>
     <form>
         <label for="duration">Duration</label>
@@ -20,6 +30,8 @@
             <option value="forever">Forever</option>
         </select>
         <button type="button" onclick="generateMailto()"></button>
+        <p id="output"></p>
     </form>
 </body>
+
 </html>

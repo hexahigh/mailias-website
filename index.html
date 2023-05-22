@@ -14,6 +14,7 @@
 
             var newLine = "%0D%0A"
             var output = "mailto:" + address + "?subject=Mailias - New alias request" + "&body=" + "User email: " + userMail + newLine + "Alias email: " + aliasMail + newLine + "Duration: " + duration
+            document.getElementById("output").removeAttribute("hidden")
             document.getElementById("output").href = output
         }
     </script>
@@ -21,6 +22,10 @@
 </head>
 
 <body>
+    <h1>Mailias</h1>
+    <h3>Free email aliases since 2023</h3>
+    <br>
+    <h2>You can use the form below to generate a alias request</h2>
     <form>
         <label for="duration">Duration</label>
         <br>
@@ -44,7 +49,7 @@
         <br>
         <button type="button" onclick="generateMailto()">Generate email</button>
         <br>
-        <a href="#" id="output">Generated url</a>
+        <a href="#" id="output" hidden>Generated url</a>
     </form>
 </body>
 

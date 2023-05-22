@@ -13,7 +13,7 @@
             var aliasMail = document.getElementById("aliasMail").value
 
             var newLine = "%0D%0A"
-            var output = "mailto:" + address + "?subject=Mailias - New alias request" + "&body=" + "User email: " + userMail + newLine + "Alias email: " + aliasMail + "@mailias.eu.org" + newLine + "Duration: " + duration
+            var output = "mailto:" + address + "?subject=Mailias - New alias request" + "&body=" + "User email: " + userMail + newLine + "Alias email: " + aliasMail + newLine + "Duration: " + duration
             document.getElementById("output").href = output
         }
     </script>
@@ -36,11 +36,11 @@
         <br>
         <label>Your email</label>
         <br>
-        <input id="userMail" type="email">
+        <input placeholder="example@gmail.com" id="userMail" type="email">
         <br>
         <label>The email alias that you want</label>
         <br>
-        <input id="aliasMail" type="text"><p>@mailias.eu.org</p>
+        <input placeholder="example@mailias.eu.org" id="aliasMail" type="text">
         <br>
         <button type="button" onclick="generateMailto()">Generate email</button>
         <br>

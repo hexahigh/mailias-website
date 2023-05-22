@@ -50,13 +50,11 @@
         <h2>Instructions:</h2>
         <p>First choose the name and the domain of the email that you want. Currently only one domain is avaliable but
             more will be added in the future.</p>
-        <p>When you have chosen your name and domain you can use the form below to generate a link to send an alias
-            request email. Once it has been sent you might have to wait 0.5 to 2 days. Make sure to check your inbox and
-            spam for an email from cloudflare asking you to verify your email. Once you have done this your alias will
-            soon be ready to be used</p>
+        <p>When you have chosen your name and domain you can use the form below to send a request. Once the request has been sent you might have to wait upto 1 business day for it be accepted. Make sure to check your inbox and
+            spam for an email from cloudflare asking you to verify your email. Once you have done this your alias will be ready to be used</p>
         <p>If you get any errors or need to contact me please send an email to admin@mailias.eu.org or use other contact
             methods found on my <a href="https://boofdev.eu.org">homepage</a>.</p>
-        <form>
+        <form action="https://public.herotofu.com/v1/d0954850-f8a5-11ed-b2e2-c10354b56774" method="post" accept-charset="UTF-8">
             <label for="duration">Duration</label>
             <br>
             <select id="duration">
@@ -75,9 +73,16 @@
             <br>
             <label>The email alias that you want</label>
             <br>
-            <input placeholder="example@mailias.eu.org" id="aliasMail" type="text" required>
+            <input placeholder="example" id="aliasMail" type="text" required>
             <br>
-            <button type="button" onclick="generateMailto()">Generate email</button>
+            <label for="domain">Domain</label>
+            <br>
+            <select id="domain">
+                <option value="mailias.eu.org">mailias.eu.org</option>
+                <option value="shrail.eu.org" disabled>shrail.eu.org COMING SOON</option>
+            </select>
+            <br>
+            <button type="submit">Submit form</button>
             <br>
             <a href="#" id="output" hidden>Generated url</a>
         </form>

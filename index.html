@@ -25,40 +25,48 @@
     <div style="text-align: center;">
         <h1>Mailias</h1>
         <h3>Free and unlimited email aliases</h3>
+        <p>This simple service allows you to get a email alias that is completely free and unlimited. You get unlimited
+            incoming emails and unlimited aliases.</p>
     </div>
-    <p>This simple service allows you to get a email alias that is completely free and unlimited. You get unlimited incoming emails and unlimited aliases.</p>
     <br>
-    <h2>Instructions:</h2>
-    <p>First choose the name and the domain of the email that you want. Currently only one domain is avaliable but more will be added in the future.</p>
-    <p>When you have chosen your name and domain you can use the form below to generate a link to send an alias request email. Once it has been sent you might have to wait 0.5 to 2 days. Make sure to check your inbox and spam for an email from cloudflare asking you to verify your email. Once you have done this your alias will soon be ready to be used</p>
-    <p>If you get any errors or need to contact me please send an email to admin@mailias.eu.org or use other contact methods found on my <a href="https://boofdev.eu.org">homepage</a>.</p>
-    <form>
-        <label for="duration">Duration</label>
+    <div style="margin-left: 15px;">
+        <h2>Instructions:</h2>
+        <p>First choose the name and the domain of the email that you want. Currently only one domain is avaliable but
+            more will be added in the future.</p>
+        <p>When you have chosen your name and domain you can use the form below to generate a link to send an alias
+            request email. Once it has been sent you might have to wait 0.5 to 2 days. Make sure to check your inbox and
+            spam for an email from cloudflare asking you to verify your email. Once you have done this your alias will
+            soon be ready to be used</p>
+        <p>If you get any errors or need to contact me please send an email to admin@mailias.eu.org or use other contact
+            methods found on my <a href="https://boofdev.eu.org">homepage</a>.</p>
+        <form>
+            <label for="duration">Duration</label>
+            <br>
+            <select id="duration">
+                <option value="">--Please choose a duration--</option>
+                <option value="1w">1 week</option>
+                <option value="2w">2 weeks</option>
+                <option value="1m">1 month</option>
+                <option value="3m">3 months</option>
+                <option value="1y">1 Year</option>
+                <option value="forever">Forever</option>
+            </select>
+            <br>
+            <label>Your email</label>
+            <br>
+            <input placeholder="example@gmail.com" id="userMail" type="email" required>
+            <br>
+            <label>The email alias that you want</label>
+            <br>
+            <input placeholder="example@mailias.eu.org" id="aliasMail" type="text" required>
+            <br>
+            <button type="button" onclick="generateMailto()">Generate email</button>
+            <br>
+            <a href="#" id="output" hidden>Generated url</a>
+        </form>
         <br>
-        <select id="duration">
-            <option value="">--Please choose a duration--</option>
-            <option value="1w">1 week</option>
-            <option value="2w">2 weeks</option>
-            <option value="1m">1 month</option>
-            <option value="3m">3 months</option>
-            <option value="1y">1 Year</option>
-            <option value="forever">Forever</option>
-        </select>
-        <br>
-        <label>Your email</label>
-        <br>
-        <input placeholder="example@gmail.com" id="userMail" type="email" required>
-        <br>
-        <label>The email alias that you want</label>
-        <br>
-        <input placeholder="example@mailias.eu.org" id="aliasMail" type="text" required>
-        <br>
-        <button type="button" onclick="generateMailto()">Generate email</button>
-        <br>
-        <a href="#" id="output" hidden>Generated url</a>
-    </form>
-    <br>
-    <p>Want to get email aliases in bulk? Contact me at admin@mailias.eu.org</p>
+        <p>Want to get email aliases in bulk? Contact me at admin@mailias.eu.org</p>
+    </div>
 </body>
 
 </html>

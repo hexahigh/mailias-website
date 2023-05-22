@@ -11,7 +11,7 @@
             var duration = document.getElementById("duration").value
 
             var output = "mailto:" + address + "?subject=Mailias - New alias request"
-            document.getElementById("output").innerText = output
+            document.getElementById("output").href = output
         }
     </script>
     <title>Mailias</title>
@@ -30,7 +30,7 @@
             <option value="forever">Forever</option>
         </select>
         <button type="button" onclick="generateMailto()">Generate email</button>
-        <a id="output"></a>
+        <a href="#" id="output">Generated url</a>
     </form>
 </body>
 

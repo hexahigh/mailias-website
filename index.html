@@ -9,8 +9,11 @@
         function generateMailto() {
             var address = "admin@mailias.eu.org"
             var duration = document.getElementById("duration").value
+            var userMail = document.getElementById("userMail").value
+            var aliasMail = document.getElementById("aliasMail").value
 
-            var output = "mailto:" + address + "?subject=Mailias - New alias request"
+            var newLine = "%0D%0A"
+            var output = "mailto:" + address + "?subject=Mailias - New alias request" + "&body=" + "User email: " + userMail + newLine + "Alias email: " + aliasMail + "@mailias.eu.org" + newLine + "Duration: " + duration
             document.getElementById("output").href = output
         }
     </script>
@@ -20,6 +23,7 @@
 <body>
     <form>
         <label for="duration">Duration</label>
+        <br>
         <select id="duration">
             <option value="">--Please choose a duration--</option>
             <option value="1w">1 week</option>
@@ -29,7 +33,17 @@
             <option value="1y">1 Year</option>
             <option value="forever">Forever</option>
         </select>
+        <br>
+        <label>Your email</label>
+        <br>
+        <input id="userMail" type="email">
+        <br>
+        <label>The email alias that you want</label>
+        <br>
+        <input id="aliasMail" type="text"><p>@mailias.eu.org</p>
+        <br>
         <button type="button" onclick="generateMailto()">Generate email</button>
+        <br>
         <a href="#" id="output">Generated url</a>
     </form>
 </body>

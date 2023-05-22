@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="Mailias">
+    <meta name="twitter:site" content="Mailias">
+    <meta property="og:type" content="Mailias">
+    <meta property="og:title" content="Mailias">
+    <meta name="twitter:title" content="Mailias">
+    <meta property="og:url" content="https://mailias.eu.org">
+    <meta name="twitter:url" content="https://mailias.eu.org">
+    <meta property="og:image" content="https://mailias.eu.org/data/img/embed.png">
+    <meta name="twitter:image" content="https://mailias.eu.org/data/img/embed.png">
+    <meta name="description" content="Free and unlimited email aliases">
+    <meta name="twitter:description" content="Free and unlimited email aliases">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta name="keywords" content="Email, Alias, email alias,">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/data/img/logo.svg">
+    <script src="form.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <script defer>
+        function generateMailto() {
+            var address = "requests@mailias.eu.org"
+            var duration = document.getElementById("duration").value
+            var userMail = document.getElementById("userMail").value
+            var aliasMail = document.getElementById("aliasMail").value
+
+            var newLine = "%0D%0A"
+            var output = "mailto:" + address + "?subject=Mailias - New alias request" + "&body=" + "User email: " + userMail + newLine + "Alias email: " + aliasMail + newLine + "Duration: " + duration
+            document.getElementById("output").removeAttribute("hidden")
+            document.getElementById("output").href = output
+        }
+    </script>
+    <title>Mailias</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <img class="noDownload" src="data/img/white-banner.svg">
+    </div>
+    <br>
+    <div style="margin-left: 15px;">
+        <div style="width: 100%;">
+            <div style="float:left; width: 50%;">
+                <form style="margin-right: 50%;" action="https://public.herotofu.com/v1/d0954850-f8a5-11ed-b2e2-c10354b56774" method="post">
+                    <label for="userMail">User email:</label>
+                    <br>
+                    <input placeholder="example@gmail.com" class="input" name="Email" type="email"
+                        id="userMail" required>
+                    <br>
+                    <label>The alias that you want</label>
+                    <br>
+                    <input class="input" name="alias" placeholder="example" id="aliasMail"
+                        type="text" required>
+                    <br>
+                    <label for="domain">Domain</label>
+                    <br>
+                    <div class="custom-select" width="200px">
+                        <select name="Domain" id="domain">
+                            <option value="null">--Please select a domain--</option>
+                            <option value="mailias.eu.org">mailias.eu.org</option>
+                            <option value="shrail.eu.org">shrail.eu.org</option>
+                        </select>
+                    </div>
+                    <br>
+                    <input class="Form-button" type="submit" value="Send request">
+                </form>
+            </div>
+            <div style="float:right; width: 50%;">
+                <p>
+                    Instructions:
+                </p>
+                <ol type="1">
+                    <li>Choose a name and domain for your email.</li>
+                    <li>Fill out the form below to send a request.</li>
+                    <li>After sending the request, expect up to 1 business day for it to be accepted.</li>
+                    <li>Check both your inbox and spam folder for an email from Cloudflare to verify your email.</li>
+                    <li>Once verified, your alias will be ready to use.</li>
+                </ol>
+                <p>
+                    If you encounter any errors or need to contact me, please email admin@mailias.eu.org or use other
+                    contact methods available on my homepage.
+                </p>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</body>
+
+</html>

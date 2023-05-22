@@ -1,14 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 
-p button label input {
+p, button, input, label, a, li {
     font-family: 'Inter', sans-serif;
 }
 
-h1 h2 h3 h4 h5 h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Archivo', sans-serif;
 }
 
 .noDownload {
     pointer-events: none;
 }
+
+.Form-button {
+    background-color: #00C2FF;
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #00C2FF;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+  }

@@ -22,7 +22,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/data/img/logo.svg">
+    <script src="form.js" defer></script>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
     <script defer>
         function generateMailto() {
             var address = "requests@mailias.eu.org"
@@ -41,38 +43,54 @@
 
 <body>
     <div style="text-align: center;">
-            <img class="noDownload" src="data/img/white-banner.svg">
+        <img class="noDownload" src="data/img/white-banner.svg">
     </div>
     <br>
     <div style="margin-left: 15px;">
-        <h2>Instructions:</h2>
-        <p>First choose the name and the domain of the email that you want. </p>
-        <p>When you have chosen your name and domain you can use the form below to send a request. Once the request has been sent you might have to wait upto 1 business day for it be accepted. Make sure to check your inbox and
-            spam for an email from cloudflare asking you to verify your email. Once you have done this your alias will be ready to be used</p>
-        <p>If you get any errors or need to contact me please send an email to admin@mailias.eu.org or use other contact
-            methods found on my <a href="https://boofdev.eu.org">homepage</a>.</p>
-        <form action="https://public.herotofu.com/v1/d0954850-f8a5-11ed-b2e2-c10354b56774" method="post">
-            <label>Your email</label>
-            <br>
-            <input name="User email" placeholder="example@gmail.com" id="userMail" type="email" required>
-            <br>
-            <label>The email alias that you want</label>
-            <br>
-            <input name="alias" placeholder="example" id="aliasMail" type="text" required>
-            <br>
-            <label for="domain">Domain</label>
-            <br>
-            <select name="Domain" id="domain">
-                <option value="mailias.eu.org">mailias.eu.org</option>
-                <option value="shrail.eu.org">shrail.eu.org</option>
-            </select>
-            <br>
-            <input type="submit" value="Send request">
-            <br>
-            <a href="#" id="output" hidden>Generated url</a>
-        </form>
-        <br>
-        <p>Want to get email aliases in bulk? Contact me at admin@mailias.eu.org</p>
+        <div style="width: 100%;">
+            <div style="float:left; width: 50%;">
+                <form style="margin-right: 50%;" action="https://public.herotofu.com/v1/d0954850-f8a5-11ed-b2e2-c10354b56774" method="post">
+                    <label for="userMail">User email:</label>
+                    <br>
+                    <input placeholder="example@gmail.com" class="input" name="Email" type="email"
+                        id="userMail" required>
+                    <br>
+                    <label>The alias that you want</label>
+                    <br>
+                    <input class="input" name="alias" placeholder="example" id="aliasMail"
+                        type="text" required>
+                    <br>
+                    <label for="domain">Domain</label>
+                    <br>
+                    <div class="custom-select" width="200px">
+                        <select name="Domain" id="domain">
+                            <option value="null">--Please select a domain--</option>
+                            <option value="mailias.eu.org">mailias.eu.org</option>
+                            <option value="shrail.eu.org">shrail.eu.org</option>
+                        </select>
+                    </div>
+                    <br>
+                    <input class="Form-button" type="submit" value="Send request">
+                </form>
+            </div>
+            <div style="float:right; width: 50%;">
+                <p>
+                    Instructions:
+                </p>
+                <ol type="1">
+                    <li>Choose a name and domain for your email.</li>
+                    <li>Fill out the form below to send a request.</li>
+                    <li>After sending the request, expect up to 1 business day for it to be accepted.</li>
+                    <li>Check both your inbox and spam folder for an email from Cloudflare to verify your email.</li>
+                    <li>Once verified, your alias will be ready to use.</li>
+                </ol>
+                <p>
+                    If you encounter any errors or need to contact me, please email admin@mailias.eu.org or use other
+                    contact methods available on my homepage.
+                </p>
+            </div>
+        </div>
+        <div style="clear:both"></div>
     </div>
 </body>
 
